@@ -1,5 +1,5 @@
 {% set name = "xmovie" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a7bbe3344da7d8349979ecc909ce74a0c5a7bb25e5cfcd07866a6ba562462497
+  sha256: f149f1a38a5c985e4801773129e4a07c33703039f1b25fde76a8a636e9a05220
 
 build:
   noarch: python
@@ -28,14 +28,14 @@ requirements:
 
 test:
   imports:
-    - xmovie 
+    - xmovie
 
 about:
   home: https://github.com/jbusecke/xmovie
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'A simple way of creating movies from xarray objects'
+  summary: A simple way of creating movies from xarray objects
   description: |
     A simple way of creating movies from xarray objects
   dev_url: https://github.com/jbusecke/xmovie
