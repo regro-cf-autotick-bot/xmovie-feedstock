@@ -1,44 +1,45 @@
 {% set name = "xmovie" %}
 {% set version = "0.2.2" %}
 
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/xmovie-{{ version }}.tar.gz
   sha256: f149f1a38a5c985e4801773129e4a07c33703039f1b25fde76a8a636e9a05220
 
 build:
-  noarch: python
   number: 0
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.7
     - pip
-    - pytest-runner
+    - python >=3.6
+    - setuptools-scm
   run:
-    - python >=3.7
-    - xarray
-    - dask
     - cartopy
-    - ffmpeg
+    - dask-core
+    - numpy
+    - python >=3.6
+    - xarray
 
 test:
   imports:
     - xmovie
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/jbusecke/xmovie
+  summary: Simply create beautiful movies from xarray objects
   license: MIT
-  license_family: MIT
   license_file: LICENSE
-  summary: A simple way of creating movies from xarray objects
-  description: |
-    A simple way of creating movies from xarray objects
-  dev_url: https://github.com/jbusecke/xmovie
 
 extra:
   recipe-maintainers:
