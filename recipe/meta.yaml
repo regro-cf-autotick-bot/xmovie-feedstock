@@ -18,13 +18,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
     - setuptools-scm
   run:
     - cartopy
     - dask-core
     - numpy
-    - python >=3.6
+    - python >=3.7
     - xarray
 
 test:
