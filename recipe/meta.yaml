@@ -1,5 +1,5 @@
 {% set name = "xmovie" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/xmovie-{{ version }}.tar.gz
-  sha256: 3b5faf00ec05bc4b3734f6af0e012a3a497f7a4b1b20477c7c91cbc3d1adaff2
+  sha256: 668f783a0f2a969b4f572bd5908f51fd4c079cd5f5519e87d644b7f56b11ab21
 
 build:
   number: 0
